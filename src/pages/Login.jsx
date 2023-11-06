@@ -5,7 +5,7 @@ import { Context } from "../provider/Provider";
 
 const Login = () => {
 
-    const { signIn } = useContext(Context);
+    const { signIn, googleSignIn } = useContext(Context);
 
     const [loginError, setLoginError] = useState();
 
@@ -25,6 +25,16 @@ const Login = () => {
             })
             .catch((error) => {
                 setLoginError(error.message);
+            });
+    }
+
+    const handleGoogleLogin = () => {
+        googleSignIn()
+            .then((result) => {
+                console.log(result.user);
+                navigate("/");
+            }).catch((error) => {
+                console.log(error.message);
             });
     }
 
@@ -54,7 +64,7 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary mb-2">Login</button>
-                            <button className="btn btn-primary mb-2 bg-[#4285F4] border-none">Login With Google</button>
+                            <button className="btn btn-primary mb-2 bg-[#4285F4] border-none" onClick={handleGoogleLogin}>Login With Google</button>
                         </div>
                         <p>If you are new in this website please <Link to="/register" className="underline text-blue-600 text-xl">Register</Link>  </p>
                     </form>
