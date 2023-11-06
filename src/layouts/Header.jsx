@@ -1,9 +1,10 @@
+import Navbar from "../components/layouts/Navbar";
 
 
 const Header = () => {
     return (
         <div>
-            <h2>Header</h2>
+            <Navbar></Navbar>
         </div>
     );
 };
