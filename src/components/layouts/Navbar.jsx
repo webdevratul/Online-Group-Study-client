@@ -1,12 +1,27 @@
 import { FcAlarmClock, FcHome } from "react-icons/fc";
 import { FaLock, FaRegistered } from "react-icons/fa";
 import { AiOutlinePhone } from "react-icons/ai";
+import { BiLogOut } from "react-icons/bi";
 import logo from "../../assets/img/logo.png";
 import default_profile from "../../assets/img/default-profile.jpg";
 import { NavLink, Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../provider/Provider";
 
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(Context);
+
+    const handleSignOut = () => {
+
+        logOut()
+            .then(() => {
+            }).catch((error) => {
+                console.log(error.message);
+            });
+    }
+
     const navLink = <>
         <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Home</NavLink></li>
         <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Assignments</NavLink></li>
@@ -39,8 +54,15 @@ const Navbar = () => {
                     </div>
                     <span className="mx-2 text-white text-2xl font-bold">|</span>
                     <div className="flex items-center text-white">
-                        <FaLock className="mr-3 text-2xl"></FaLock>
-                        <Link to="/login">Login</Link>
+                        {
+                            user ? <>
+                                <BiLogOut className="mr-3 text-2xl"></BiLogOut>
+                                <button onClick={handleSignOut}>Logout</button>
+                            </> : <>
+                                <FaLock className="mr-3 text-2xl"></FaLock>
+                                <Link to="/login">Login</Link>
+                            </>
+                        }
                     </div>
                 </div>
             </div>
@@ -55,7 +77,10 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                    <img className="w-[50px] border-2 shadow-2xl rounded-full" src={default_profile} alt="" />
+                    {
+                        user ? <img className="w-[50px] h-[50px] border-4 shadow-2xl rounded-full" src={user.photoURL} title={user.displayName} /> : <img className="w-[50px] h-[50px] border-4 shadow-2xl rounded-full" src={default_profile} alt="" />
+                    }
+
                 </div>
             </div>
         </div>

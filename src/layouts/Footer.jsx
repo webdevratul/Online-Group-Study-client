@@ -27,7 +27,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="md:ml-10 mx-auto md:mx-0 mb-4 text-white">
+                <div className="md:ml-28 mx-auto md:mx-0 mb-4 text-white">
                     <h2 className="text-3xl font-bold mb-4">Links</h2>
                     <div className="mx-auto flex flex-col gap-y-4 cursor-pointer">
                         <div className="flex items-center">
@@ -42,13 +42,9 @@ const Footer = () => {
                             <AiFillCaretRight className="text-3xl text-[#FFD32B]"></AiFillCaretRight>
                             <p className="text-xl"> <Link to='/faq'>FAQ</Link> </p>
                         </div>
-                        <div className="flex items-center">
-                            <AiFillCaretRight className="text-3xl text-[#FFD32B]"></AiFillCaretRight>
-                            <p className="text-xl">Footer</p>
-                        </div>
                     </div>
                 </div>
-                <div className="mx-auto md:mx-0 mb-4 text-white">
+                <div className="mx-auto md:ml-8 md:mx-0 mb-4 text-white">
                     <h2 className="text-3xl font-bold mb-4">Pages</h2>
                     <div className="mx-auto flex flex-col gap-y-4 cursor-pointer">
                         <div className="flex items-center">
