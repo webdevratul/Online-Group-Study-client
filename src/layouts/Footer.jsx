@@ -53,7 +53,7 @@ const Footer = () => {
                         </div>
                         <div className="flex items-center">
                             <AiFillCaretRight className="text-3xl text-[#FFD32B]"></AiFillCaretRight>
-                            <p className="text-xl"><Link to="/assignment">Assignments</Link></p>
+                            <p className="text-xl"><Link to="/assignments">Assignments</Link></p>
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,8 @@ import Faq from "../components/pages/Faq";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import CreateAssignment from "../pages/CreateAssignment";
+import PrivateRoutes from "./PrivateRoutes";
+import Assignments from "../pages/Assignments";
 
 
 const router = createBrowserRouter([
@@ -40,7 +42,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/createAssignment",
-                element: <CreateAssignment></CreateAssignment>
+                element: <PrivateRoutes><CreateAssignment></CreateAssignment></PrivateRoutes>
+            },
+            {
+                path: "/assignments",
+                element: <Assignments></Assignments>
             }
         ]
     },

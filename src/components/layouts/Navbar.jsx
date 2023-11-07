@@ -24,10 +24,16 @@ const Navbar = () => {
 
     const navLink = <>
         <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Home</NavLink></li>
-        <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Assignments</NavLink></li>
-        <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/createAssignment">Create assignments</NavLink></li>
-        <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">MyAssignments</NavLink></li>
-        <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Submitted Assignments</NavLink></li>
+        <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/assignments">Assignments</NavLink></li>
+
+        {
+            user && <>
+                <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/createAssignment">Create assignments</NavLink></li>
+                <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">MyAssignments</NavLink></li>
+                <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Submitted Assignments</NavLink></li>
+            </>
+        }
+
     </>
     return (
         <div>
@@ -49,10 +55,14 @@ const Navbar = () => {
 
                 <div className="flex text-xl w-[350px] mx-auto">
                     <div className="flex items-center text-white">
-                        <FaRegistered className="mr-3 text-2xl"></FaRegistered>
-                        <Link to="/register">Register</Link>
+                        {
+                            user ? "" : <>
+                                <FaRegistered className="mr-3 text-2xl"></FaRegistered>
+                                <Link to="/register">Register</Link>
+                                <span className="mx-2 text-white text-2xl font-bold">|</span>
+                            </>
+                        }
                     </div>
-                    <span className="mx-2 text-white text-2xl font-bold">|</span>
                     <div className="flex items-center text-white">
                         {
                             user ? <>
