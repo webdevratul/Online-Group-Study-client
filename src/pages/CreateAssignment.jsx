@@ -1,11 +1,5 @@
 import assignment from "../assets/img/assignment.png";
 
-/* title, description, marks, thumbnail
-Image URL, assignment difficulty level(easy, medium, hard) [YOU
-MAY USE DROPDOWN SELECT INPUT FIELD], and due date
-[use this package for selecting date
-“https://www.npmjs.com/package/react-datepicker”] . */
-
 
 const CreateAssignment = () => {
     return (
