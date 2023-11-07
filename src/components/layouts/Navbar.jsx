@@ -25,7 +25,7 @@ const Navbar = () => {
     const navLink = <>
         <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Home</NavLink></li>
         <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Assignments</NavLink></li>
-        <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Create assignments</NavLink></li>
+        <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/createAssignment">Create assignments</NavLink></li>
         <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">MyAssignments</NavLink></li>
         <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Submitted Assignments</NavLink></li>
     </>

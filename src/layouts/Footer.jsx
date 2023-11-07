@@ -49,11 +49,11 @@ const Footer = () => {
                     <div className="mx-auto flex flex-col gap-y-4 cursor-pointer">
                         <div className="flex items-center">
                             <AiFillCaretRight className="text-3xl text-[#FFD32B]"></AiFillCaretRight>
-                            <p className="text-xl">Home</p>
+                            <p className="text-xl"><Link to="/">Home</Link></p>
                         </div>
                         <div className="flex items-center">
                             <AiFillCaretRight className="text-3xl text-[#FFD32B]"></AiFillCaretRight>
-                            <p className="text-xl">Assignments</p>
+                            <p className="text-xl"><Link to="/assignment">Assignments</Link></p>
                         </div>
                     </div>
                 </div>

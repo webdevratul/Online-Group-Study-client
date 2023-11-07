@@ -6,6 +6,7 @@ import Features from "../components/pages/Features";
 import Faq from "../components/pages/Faq";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import CreateAssignment from "../pages/CreateAssignment";
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/createAssignment",
+                element: <CreateAssignment></CreateAssignment>
             }
         ]
     },
