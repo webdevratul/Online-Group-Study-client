@@ -1,4 +1,4 @@
-import { FcAlarmClock, FcHome } from "react-icons/fc";
+
 import { FaLock, FaRegistered } from "react-icons/fa";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BiLogOut } from "react-icons/bi";
@@ -7,6 +7,7 @@ import default_profile from "../../assets/img/default-profile.jpg";
 import { NavLink, Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../provider/Provider";
+import { BsSmartwatch, BsFillHouseGearFill } from "react-icons/bs";
 
 
 const Navbar = () => {
@@ -44,11 +45,11 @@ const Navbar = () => {
                         <h2 className="ml-2 text-xl text-white"> Phone : 8801 923 154 259</h2>
                     </div>
                     <div className="flex items-center">
-                        <FcAlarmClock className="text-2xl"></FcAlarmClock>
+                        <BsSmartwatch className="text-2xl text-white"></BsSmartwatch>
                         <h2 className="ml-2 text-xl text-white"> Opening Time : 9:30am-5:30pm</h2>
                     </div>
                     <div className="flex items-center">
-                        <FcHome className="text-2xl"></FcHome>
+                        <BsFillHouseGearFill className="text-2xl text-white"></BsFillHouseGearFill>
                         <h2 className="ml-2 text-xl text-white">Address : Labartisan 1205 Dhaka</h2>
                     </div>
                 </div>

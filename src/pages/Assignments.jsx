@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 
@@ -7,7 +7,6 @@ const Assignments = () => {
     const assignments = useLoaderData();
 
     const [allAssignments, setAllAssignment] = useState(assignments);
-
 
     return (
         <div className="bg-[#e7e3fd] pt-20 pb-32">
@@ -23,7 +22,9 @@ const Assignments = () => {
                             <h4 className="text-xl font-semibold">Difficulty: {assignment.difficulty} </h4>
                             <h5 className="mt-4 font-semibold">Due Date: {assignment.dueDate} </h5>
                             <div className="py-4 flex gap-x-4">
-                                <button className="bg-[#6C5EBF] px-4 md:px-6 py-2 text-white text-xl font-semibold">Update</button>
+                                <Link to={`/update/${assignment._id}`}>
+                                    <button className="bg-[#6C5EBF] px-4 md:px-6 py-2 text-white text-xl font-semibold">Update</button>
+                                </Link>
                                 <button className="bg-red-700 px-4 md:px-6 py-2 text-white text-xl font-semibold">Delete</button>
                             </div>
                         </div>
@@ -36,3 +37,4 @@ const Assignments = () => {
 };
 
 export default Assignments;
+

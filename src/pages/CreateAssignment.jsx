@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import assignment from "../assets/img/assignment.png";
 import Swal from 'sweetalert2';
+import { Context } from "../provider/Provider";
+
 
 const CreateAssignment = () => {
+
+
+    const { user } = useContext(Context);
 
     const handleAddAssignment = (e) => {
         e.preventDefault();
@@ -13,11 +19,13 @@ const CreateAssignment = () => {
         const photo = form.photo.value;
         const difficulty = form.difficulty.value;
         const dueDate = form.dueDate.value;
+        const email = user.email;
 
 
-        const createAssignment = { title, description, marks, photo, difficulty, dueDate };
 
-        fetch("http://localhost:200/createAssignment", {
+        const createAssignment = { title, description, marks, photo, difficulty, dueDate, email };
+
+        fetch("http://localhost:500/createAssignment", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -51,24 +59,24 @@ const CreateAssignment = () => {
                 <div className=" w-[100%] xl:w-[50%] mt-48 md:mt-60 xl:mt-0 text-center xl:text-left">
                     <h2 className="text-5xl font-bold pb-8 text-[#6C5EBF]">Create Assignment</h2>
                     <form className="w-[100%]" onSubmit={handleAddAssignment}>
-                        <input className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" placeholder="Title" type="text" name="title" />
+                        <input className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" placeholder="Title" type="text" name="title" required />
                         <br />
-                        <textarea className="w-[82%] h-20 bg-white outline-none rounded-md m-2 px-2 py-2" name="description" placeholder="Description"></textarea>
+                        <textarea className="w-[82%] h-20 bg-white outline-none rounded-md m-2 px-2 py-2" name="description" placeholder="Description" required></textarea>
                         <br />
-                        <input className="w-[40%] h-10 bg-white outline-none rounded-md xl:ml-2 px-2" placeholder="Marks" type="text" name="marks" />
-                        <input className="w-[40%] h-10 bg-white outline-none rounded-md ml-2 2xl:ml-6 px-2" placeholder="Image URL" type="text" name="photo" />
+                        <input className="w-[40%] h-10 bg-white outline-none rounded-md xl:ml-2 px-2" placeholder="Marks" type="text" name="marks" required />
+                        <input className="w-[40%] h-10 bg-white outline-none rounded-md ml-2 2xl:ml-6 px-2" placeholder="Image URL" type="text" name="photo" required />
                         <br />
                         <br />
                         <b className="m-2 text-xl">Difficulty</b>
                         <br />
-                        <select className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" name="difficulty">
+                        <select className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" name="difficulty" required>
                             <option value="Easy">Easy</option>
                             <option value="Medium">Medium</option>
                             <option value="Hard">Hard</option>
                         </select>
 
                         <br />
-                        <input className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" type="date" name="dueDate" />
+                        <input className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" type="date" name="dueDate" required />
                         <br />
                         <button className="w-[82%] h-10 outline-none rounded-md m-2 px-2 bg-[#6C5EBF] text-white text-xl font-semibold">Submit Assignment</button>
                     </form>
