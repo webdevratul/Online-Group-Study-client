@@ -62,9 +62,9 @@ const CreateAssignment = () => {
                         <b className="m-2 text-xl">Difficulty</b>
                         <br />
                         <select className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" name="difficulty">
-                            <option value="easy">Easy</option>
-                            <option value="medium">Medium</option>
-                            <option value="hard">Hard</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
                         </select>
 
                         <br />
