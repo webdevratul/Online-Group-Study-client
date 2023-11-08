@@ -30,7 +30,7 @@ const Assignments = () => {
                     });
 
                     if (proceed) {
-                        fetch(`http://localhost:500/createAssignment/${id}`, {
+                        fetch(`https://online-group-study-server-xi.vercel.app/createAssignment/${id}`, {
                             method: "DELETE"
                         })
                             .then(res => res.json())
@@ -78,7 +78,7 @@ const Assignments = () => {
                                     <button className="bg-[#6C5EBF] px-4 md:px-6 py-2 text-white text-xl font-semibold">Update</button>
                                 </Link>
                                 <button className="bg-red-700 px-4 md:px-6 py-2 text-white text-xl font-semibold" onClick={() => handleDelete(assignment._id, assignment.email)}>Delete</button>
-                                <Link>
+                                <Link to={`/view/${assignment._id}`}>
                                     <button className="bg-yellow-500 px-4 md:px-6 py-2 text-white text-xl font-semibold">View</button>
                                 </Link>
                             </div>

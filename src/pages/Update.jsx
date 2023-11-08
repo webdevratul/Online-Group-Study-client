@@ -34,7 +34,7 @@ const Update = () => {
 
         if (currentEmail === email) {
             // send data to the server 
-            fetch(`http://localhost:500/createAssignment/${_id}`, {
+            fetch(`https://online-group-study-server-xi.vercel.app/createAssignment/${_id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json"
