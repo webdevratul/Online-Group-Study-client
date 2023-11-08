@@ -78,6 +78,9 @@ const Assignments = () => {
                                     <button className="bg-[#6C5EBF] px-4 md:px-6 py-2 text-white text-xl font-semibold">Update</button>
                                 </Link>
                                 <button className="bg-red-700 px-4 md:px-6 py-2 text-white text-xl font-semibold" onClick={() => handleDelete(assignment._id, assignment.email)}>Delete</button>
+                                <Link>
+                                    <button className="bg-yellow-500 px-4 md:px-6 py-2 text-white text-xl font-semibold">View</button>
+                                </Link>
                             </div>
                         </div>
                     </div>)
@@ -89,4 +92,6 @@ const Assignments = () => {
 };
 
 export default Assignments;
+
+
 
