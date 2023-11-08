@@ -1,7 +1,8 @@
 import { useContext, useEffect } from "react";
 import assignmen2 from "../assets/img/assignment2.png";
 import { Context } from "../provider/Provider";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const Update = () => {
 
@@ -10,6 +11,8 @@ const Update = () => {
     const { user } = useContext(Context);
 
     const assignment = useLoaderData();
+
+    const navigate = useNavigate();
 
     const { _id, title, description, marks, photo, difficulty, dueDate, email } = assignment;
 
@@ -40,12 +43,24 @@ const Update = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
-                })
+                    if (data.modifiedCount > 0) {
+                        Swal.fire({
+                            title: 'success!',
+                            text: 'Assignment Updated Successfully !',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        });
+                        navigate("/assignments")
+                    }
+                });
         } else {
-            alert("Please Choose that you have created");
+            Swal.fire({
+                title: 'Error!',
+                text: 'Please Chose That you have to created',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+            });
         }
-
 
     }
 
@@ -69,6 +84,7 @@ const Update = () => {
                         <br />
                         <br />
                         <b className="m-2 text-xl">Difficulty</b>
+                        
                         <br />
                         <select className="w-[82%] h-10 bg-white outline-none rounded-md m-2 px-2" name="difficulty" defaultValue={difficulty} required>
                             <option value="Easy">Easy</option>
