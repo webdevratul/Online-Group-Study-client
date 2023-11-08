@@ -81,14 +81,14 @@ const Assignments = () => {
                             <h4 className="text-xl font-semibold">Difficulty: {assignment.difficulty} </h4>
                             <h5 className="mt-4 font-semibold">Due Date: {assignment.dueDate} </h5>
                             <h5 className="mt-4 font-semibold">Marks: {assignment.marks} </h5>
-                            <div className="py-4 flex gap-x-4">
+                            <div className="py-4 flex gap-x-2 xl:gap-x-4">
                                 <Link to={`/update/${assignment._id}`}>
-                                    <button className="bg-[#6C5EBF] px-4 md:px-6 py-2 text-white text-xl font-semibold">Update</button>
+                                    <button className="bg-[#6C5EBF] px-1 2xl:px-6 py-2 text-white text-xl font-semibold">Update</button>
                                 </Link>
-                                <button className="bg-red-700 px-4 md:px-6 py-2 text-white text-xl font-semibold" onClick={() => handleDelete(assignment._id, assignment.email)}>Delete</button>
-                                <Link to={`/view/${assignment._id}`}>
-                                    <button className="bg-yellow-500 px-4 md:px-6 py-2 text-white text-xl font-semibold">View</button>
-                                </Link>
+                                <button className="bg-red-700 px-1 2xl:px-6 py-2 text-white text-xl font-semibold" onClick={() => handleDelete(assignment._id, assignment.email)}>Delete</button>
+                                    <Link to={`/view/${assignment._id}`}>
+                                        <button className="bg-yellow-500 px-1 2xl:px-6 py-2 text-white text-xl font-semibold">View</button>
+                                    </Link>
                             </div>
                         </div>
                     </div>)
@@ -100,6 +100,8 @@ const Assignments = () => {
 };
 
 export default Assignments;
+
+
 
 
 
