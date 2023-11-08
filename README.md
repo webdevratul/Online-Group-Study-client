@@ -2,7 +2,7 @@
 
 OnlineGroupStudy is a web application that provides a platform for creating and managing group study assignments. With a focus on collaborative learning, our platform helps students and educators streamline the assignment creation process and facilitates effective group study.
 
-[Visit OnlineGroupStudy](https://your-website-link-here.com)
+[Visit OnlineGroupStudy](https://onliupstudy-6b841.web.app/)
 
 ## Features
 
@@ -26,10 +26,12 @@ Quickly access and review assignment details, submitted work, and any associated
 
 To get started with OnlineGroupStudy, follow these steps:
 
-1. Sign up for an account on [OnlineGroupStudy]().
+1. Sign up for an account on [OnlineGroupStudy](https://onliupstudy-6b841.web.app/register).
 2. Create or join a study group.
 3. Start creating assignments or collaborating with your peers.
 
 
 
 Thank you for using OnlineGroupStudy! We hope our platform enhances your group study experience. If you have any suggestions, feel free to reach out. Happy learning!
+
+

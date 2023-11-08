@@ -38,7 +38,7 @@ const Assignments = () => {
                     });
 
                     if (proceed) {
-                        fetch(`http://localhost:500/createAssignment/${id}`, {
+                        fetch(`https://online-group-study-server-xi.vercel.app/createAssignment/${id}`, {
                             method: "DELETE"
                         })
                             .then(res => res.json())

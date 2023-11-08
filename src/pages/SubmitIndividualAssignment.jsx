@@ -19,7 +19,7 @@ const SubmitIndividualAssignment = () => {
         const status = "Pending";
         const createIndividualAssignment = { title, pdf, quickNote, currentUserEmail, status };
 
-        fetch("http://localhost:500/individualCreateAssignment", {
+        fetch("https://online-group-study-server-xi.vercel.app/individualCreateAssignment", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
