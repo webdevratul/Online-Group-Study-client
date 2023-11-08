@@ -1,10 +1,14 @@
-import { useLoaderData } from "react-router-dom";
+
+import { Link, useLoaderData } from "react-router-dom";
+import { Context } from "../provider/Provider";
 
 
 const View = () => {
 
     const viewAssignment = useLoaderData();
     const { title, description, marks, photo, difficulty, dueDate, email } = viewAssignment;
+
+    
 
 
     return (
@@ -18,7 +22,9 @@ const View = () => {
                     <h3 className="my-6 text-xl">{description}</h3>
                     <h3 className="text-2xl font-semibold">Dificulty: {difficulty}</h3>
                     <h4 className="text-xl font-semibold my-4">Due Date: {dueDate}</h4>
-                    <button className="px-6 py-3 bg-yellow-500 text-white font-xl font-semibold">Take Assignment</button>
+                    <Link to="/createIndividual">
+                        <button className="px-6 py-2 bg-yellow-500 text-white text-xl">Take Assignment</button>
+                    </Link>
                 </div>
             </div>
         </div>

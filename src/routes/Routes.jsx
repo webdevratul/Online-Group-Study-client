@@ -11,6 +11,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Assignments from "../pages/Assignments";
 import Update from "../pages/Update";
 import View from "../pages/View";
+import SubmitIndividualAssignment from "../pages/SubmitIndividualAssignment";
 
 
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
                 path: "/view/:id",
                 element: <PrivateRoutes><View></View></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:500/createAssignment/${params.id}`)
+            },
+            {
+                path: "/createIndividual",
+                element: <PrivateRoutes><SubmitIndividualAssignment></SubmitIndividualAssignment></PrivateRoutes>,
             }
         ]
     },

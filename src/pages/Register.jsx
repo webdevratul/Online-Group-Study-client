@@ -42,7 +42,7 @@ const Register = () => {
     }
 
     return (
-        <div className="hero py-20 bg-base-200">
+        <div className="hero py-20 bg-[#E7E3FD]">
             <div className="hero-content flex-col">
                 <div className="card flex-shrink-0 w-[100%] max-w-sm shadow-2xl bg-base-400">
                     <form className="card-body" onSubmit={handleRegister}>
