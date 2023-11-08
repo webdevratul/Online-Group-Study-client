@@ -11,7 +11,7 @@ const View = () => {
         <div className="w-[100%] py-20 bg-[#E7E3FD] text-gray-700">
             <div className="w-[70%] mx-auto flex flex-col xl:flex-row justify-center gap-y-4 gap-x-8 items-center">
                 <div>
-                    <img className="h-[310px] max-w-[500px]" src={photo} alt="" />
+                    <img className="h-[310px] md:max-w-[500px] object-cover shadow-2xl" src={photo} alt="" />
                 </div>
                 <div>
                     <h2 className="text-3xl font-bold">{title}</h2>
