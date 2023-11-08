@@ -30,8 +30,8 @@ const Navbar = () => {
         {
             user && <>
                 <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/createAssignment">Create assignments</NavLink></li>
-                <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">MyAssignments</NavLink></li>
-                <li className="mx-3 my-2 hover:text-yellow-500"><NavLink to="/">Submitted Assignments</NavLink></li>
+                <li className="mx-3 my-2 hover:text-yellow-500 cursor-pointer">MyAssignments</li>
+                <li className="mx-3 my-2 hover:text-yellow-500 cursor-pointer">Submitted Assignments</li>
             </>
         }
 

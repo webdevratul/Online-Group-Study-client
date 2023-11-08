@@ -12,6 +12,14 @@ const Assignments = () => {
     const [allAssignments, setAllAssignment] = useState(assignments);
 
     const handleDelete = (id, email) => {
+
+        if (user == null) {
+            Swal.fire({
+                text: 'Please Login',
+                confirmButtonText: 'ok'
+            });
+        }
+
         if (user.email === email) {
             Swal.fire({
                 title: "Are you sure?",

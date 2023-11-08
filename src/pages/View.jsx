@@ -1,6 +1,6 @@
 
 import { Link, useLoaderData } from "react-router-dom";
-import { Context } from "../provider/Provider";
+
 
 
 const View = () => {
